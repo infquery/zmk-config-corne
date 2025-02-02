@@ -1,6 +1,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/pointing.h>
 
@@ -59,16 +60,24 @@
     };
 
     macros {
-        browsertab: browsertab {
+        ddsl: browsertab {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL>,
-                <&macro_tap>,
-                <&kp TAB>,
-                <&macro_release>,
-                <&kp LCTRL>;
+            bindings = <&kp DOT &kp DOT &kp FSLH>;
+        };
+
+        clncln: clncln {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp COLON &kp COLON>;
+            label = "CLNCLN";
+        };
+
+        ctaldel: ctaldel {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL &kp LEFT_ALT &kp DEL>;
+            label = "CTALDEL";
         };
     };
 
@@ -96,8 +105,8 @@
             >;
         };
 
-        NavFunc {
-            display-name = "NavFunc";
+        NumNav {
+            display-name = "NumNav";
 
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
@@ -106,10 +115,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&kp TAB           &kp N1      &kp N2     &kp N3        &kp N4           &kp N5           &kp N6         &kp N7          &kp N8           &kp N9           &kp N0  &kp BACKSPACE
-&kp LEFT_SHIFT    &kp INS     &mkp LCLK  &kp UP_ARROW  &mkp RCLK        &kp PAGE_UP      &kp PAGE_UP    &kp HOME        &mmv MOVE_UP     &kp END          &none   &none
-&kp LEFT_CONTROL  &kp DELETE  &kp LEFT   &kp DOWN      &kp RIGHT_ARROW  &kp PAGE_DOWN    &kp PAGE_DOWN  &mmv MOVE_LEFT  &mmv MOVE_RIGHT  &mmv MOVE_RIGHT  &none   &kp ESC
-                                         &kp LGUI      &kp SPACE        &trans           &trans         &kp ENTER       &kp LEFT_ALT
+&kp TAB           &kp N1      &kp N2     &kp N3        &kp N4           &kp N5              &kp N6         &kp N7          &kp N8           &kp N9           &kp N0  &kp BACKSPACE
+&kp LEFT_SHIFT    &kp INS     &mkp LCLK  &kp UP_ARROW  &mkp RCLK        &mkp MCLK           &kp PAGE_UP    &kp HOME        &mmv MOVE_UP     &kp END          &none   &none
+&kp LEFT_CONTROL  &kp DELETE  &kp LEFT   &kp DOWN      &kp RIGHT_ARROW  &kt LEFT_CONTROL    &kp PAGE_DOWN  &mmv MOVE_LEFT  &mmv MOVE_RIGHT  &mmv MOVE_RIGHT  &none   &kp ESC
+                                         &kp LGUI      &kp SPACE        &trans              &trans         &kp ENTER       &kp LEFT_ALT
             >;
         };
 
@@ -123,30 +132,20 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB           &kp SQT          &kp LT     &kp GT     &kp DQT    &kp DOT      &kp CARET  &kp AMPS   &kp ASTRK  &kp LEFT_PARENTHESIS  &kp RPAR  &trans
-&kp LEFT_SHIFT    &kp EXCLAMATION  &kp MINUS  &kp PLUS   &kp EQUAL  &kp HASH     &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT              &kp BSLH  &trans
-&kp LEFT_CONTROL  &kp CARET        &kp FSLH   &kp ASTRK  &kp BSLH   &kp TILDE    &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC              &kp PIPE  &trans
-                                              &kp LGUI   &trans     &trans       &trans     &trans     &trans
+&kp TAB           &kp SQT          &kp LT     &kp GT     &kp DQT    &kp DOT     &kp AMPS   &kp AMPS   &kp LPAR      &kp RPAR  &kp PRCNT  &kp DEL
+&kp LEFT_SHIFT    &kp EXCLAMATION  &kp MINUS  &kp PLUS   &kp EQUAL  &kp HASH    &kp PIPE   &clncln    &kp LBKT      &kp RBKT  &kp QMARK  &none
+&kp LEFT_CONTROL  &kp CARET        &kp FSLH   &kp ASTRK  &kp BSLH   &ddsl       &kp TILDE  &kp DLLR   &kp LBRC      &kp RBRC  &kp AT     &none
+                                              &kp LGUI   &kp SPACE  &trans      &trans     &kp ENTER  &kp LEFT_ALT
             >;
         };
 
         ADJ {
             display-name = "System";
             bindings = <
-&trans  &kp F1        &kp F2        &kp F3        &kp F4      &kp F5            &kp F6  &kp F7  &kp F8  &kp F9  &kp F10      &trans
-&trans  &kp F11       &kp F12       &trans        &trans      &studio_unlock    &trans  &trans  &trans  &trans  &trans       &trans
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR  &bt BT_CLR_ALL    &trans  &trans  &trans  &trans  &bootloader  &trans
-                                    &trans        &trans      &trans            &trans  &trans  &trans
-            >;
-        };
-
-        EXTRA {
-            display-name = "extra";
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans       &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans       &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &bootloader  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&none  &kp K_MUTE  &kp C_VOL_UP  &kp C_VOL_DN  &bt BT_SEL 0  &bt BT_SEL 1      &none   &none      &none         &none    &none    &ctaldel
+&none  &none       &none         &none         &bt BT_SEL 2  &bt BT_SEL 3      &kp F1  &kp F2     &kp F3        &kp F5   &kp F5   &kp F6
+&none  &none       &none         &none         &bt BT_CLR    &bt BT_CLR_ALL    &kp F7  &kp F8     &kp F9        &kp F10  &kp F11  &kp F12
+                                 &kp LEFT_WIN  &kp SPACE     &trans            &trans  &kp ENTER  &kp LEFT_ALT
             >;
         };
     };
