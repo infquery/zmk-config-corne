@@ -134,7 +134,7 @@
             bindings = <
 &kp TAB           &kp SQT          &kp LT     &kp GT     &kp DQT    &kp DOT     &kp AMPS   &kp AMPS   &kp LPAR      &kp RPAR  &kp PRCNT  &kp DEL
 &kp LEFT_SHIFT    &kp EXCLAMATION  &kp MINUS  &kp PLUS   &kp EQUAL  &kp HASH    &kp PIPE   &clncln    &kp LBKT      &kp RBKT  &kp QMARK  &none
-&kp LEFT_CONTROL  &kp CARET        &kp FSLH   &kp ASTRK  &kp BSLH   &ddsl       &kp TILDE  &kp DLLR   &kp LBRC      &kp RBRC  &kp AT     &none
+&kp LEFT_CONTROL  &kp CARET        &kp FSLH   &kp ASTRK  &kp BSLH   &ddsl       &kp TILDE  &kp DLLR   &kp LBRC      &kp RBRC  &kp AT     &kp ESC
                                               &kp LGUI   &kp SPACE  &trans      &trans     &kp ENTER  &kp LEFT_ALT
             >;
         };
