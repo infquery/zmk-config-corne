@@ -115,9 +115,9 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&kp TAB           &kp N1      &kp N2     &kp N3        &kp N4           &kp N5              &kp N6         &kp N7          &kp N8           &kp N9           &kp N0  &kp BACKSPACE
-&kp LEFT_SHIFT    &kp INS     &mkp LCLK  &kp UP_ARROW  &mkp RCLK        &mkp MCLK           &kp PAGE_UP    &kp HOME        &mmv MOVE_UP     &kp END          &none   &none
-&kp LEFT_CONTROL  &kp DELETE  &kp LEFT   &kp DOWN      &kp RIGHT_ARROW  &kt LEFT_CONTROL    &kp PAGE_DOWN  &mmv MOVE_LEFT  &mmv MOVE_RIGHT  &mmv MOVE_RIGHT  &none   &kp ESC
+&kp TAB           &kp N1      &kp N2     &kp N3        &kp N4           &kp N5              &kp N6         &kp N7          &kp N8          &kp N9           &kp N0  &kp BACKSPACE
+&kp LEFT_SHIFT    &kp INS     &mkp LCLK  &kp UP_ARROW  &mkp RCLK        &mkp MCLK           &kp PAGE_UP    &kp HOME        &mmv MOVE_UP    &kp END          &none   &none
+&kp LEFT_CONTROL  &kp DELETE  &kp LEFT   &kp DOWN      &kp RIGHT_ARROW  &kt LEFT_CONTROL    &kp PAGE_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none   &kp ESC
                                          &kp LGUI      &kp SPACE        &trans              &trans         &kp ENTER       &kp LEFT_ALT
             >;
         };
