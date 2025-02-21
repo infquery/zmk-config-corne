@@ -83,56 +83,56 @@
         salt1: salt1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(L) &kp N &kp LS(J) &kp I &kp DOT &kp A &kp LS(K) &kp EXCL &kp DOT &kp LS(E)>;
+            bindings = <&kp DOT &kp M &kp LS(T) &kp LS(A) &kp N4 &kp LS(V) &kp LS(L) &kp LS(P) &kp DOT &kp R>;
             label = "SALT1";
         };
 
         salt2: salt2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(R) &kp Q &kp Y &kp A &kp LS(Y) &kp LS(P) &kp P &kp C &kp LS(U) &kp E &kp N2 &kp A &kp M &kp N6>;
+            bindings = <&kp LS(G) &kp LS(W) &kp I &kp AT &kp N9 &kp O &kp R &kp LS(R) &kp V &kp W &kp LS(D) &kp LS(R) &kp LS(Z) &kp H>;
             label = "SALT2";
         };
 
         salt3: salt3 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp N3 &kp UNDER &kp LS(C) &kp LS(K) &kp MINUS &kp F &kp N9 &kp STAR &kp UNDER &kp K>;
+            bindings = <&kp N4 &kp LS(B) &kp LS(X) &kp O &kp J &kp EXCL &kp X &kp LS(W) &kp LS(W) &kp LS(L)>;
             label = "SALT3";
         };
 
         salt4: salt4 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp Y &kp LS(J) &kp D &kp LS(L) &kp MINUS &kp LS(B) &kp LS(T) &kp W &kp LS(V) &kp LS(C) &kp LS(M) &kp LS(U) &kp AT &kp I &kp H &kp LS(E)>;
+            bindings = <&kp LS(L) &kp LS(A) &kp A &kp EXCL &kp LS(D) &kp LS(E) &kp N6 &kp T &kp STAR &kp O &kp K &kp LS(N) &kp LS(D) &kp N9 &kp LS(Y) &kp Q>;
             label = "SALT4";
         };
 
         salt5: salt5 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(X) &kp STAR &kp N9 &kp E &kp N9 &kp N4 &kp N &kp LS(M) &kp EXCL &kp M &kp B &kp N2 &kp LS(L) &kp STAR &kp H &kp LS(Y)>;
+            bindings = <&kp Y &kp LS(X) &kp LS(F) &kp MINUS &kp LS(X) &kp A &kp LS(F) &kp R &kp Z &kp P &kp N3 &kp DOT &kp S &kp LS(X) &kp X &kp LS(D)>;
             label = "SALT5";
         };
 
         salt6: salt6 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp V &kp LS(C) &kp N9 &kp K &kp LS(N) &kp LS(Y) &kp I &kp LS(G) &kp LS(H) &kp DOT &kp AT &kp T &kp AT &kp B &kp EXCL &kp I>;
+            bindings = <&kp X &kp LS(M) &kp W &kp N3 &kp H &kp LS(R) &kp LS(G) &kp X &kp Z &kp N3 &kp N2 &kp MINUS &kp LS(V) &kp S &kp LS(R) &kp I>;
             label = "SALT6";
         };
 
         salt7: salt7 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp EXCL &kp C &kp LS(W) &kp P &kp LS(E) &kp O &kp LS(M) &kp D &kp AT &kp H &kp N4 &kp N &kp LS(J) &kp U &kp N8 &kp LS(P)>;
+            bindings = <&kp M &kp LS(H) &kp Y &kp N2 &kp Z &kp LS(C) &kp LS(C) &kp LS(V) &kp N2 &kp STAR &kp D &kp LS(G) &kp LS(X) &kp P &kp LS(A) &kp LS(Y)>;
             label = "SALT7";
         };
 
         salt8: salt8 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp V &kp DOT &kp DOT &kp LS(X) &kp P &kp T &kp J &kp LS(C) &kp MINUS &kp I &kp LS(B) &kp K &kp R &kp LS(M) &kp N4 &kp X>;
+            bindings = <&kp LS(F) &kp N9 &kp LS(P) &kp N3 &kp P &kp DOT &kp Z &kp K &kp I &kp I &kp U &kp P &kp LS(A) &kp LS(Q) &kp LS(V) &kp N7>;
             label = "SALT8";
         };
     };
