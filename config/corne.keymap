@@ -79,6 +79,62 @@
             bindings = <&kp LCTRL &kp LEFT_ALT &kp DEL>;
             label = "CTALDEL";
         };
+
+        salt1: salt1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(L) &kp N &kp LS(J) &kp I &kp DOT &kp A &kp LS(K) &kp EXCL &kp DOT &kp LS(E)>;
+            label = "SALT1";
+        };
+
+        salt2: salt2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(R) &kp Q &kp Y &kp A &kp LS(Y) &kp LS(P) &kp P &kp C &kp LS(U) &kp E &kp N2 &kp A &kp M &kp N6>;
+            label = "SALT2";
+        };
+
+        salt3: salt3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N3 &kp UNDER &kp LS(C) &kp LS(K) &kp MINUS &kp F &kp N9 &kp STAR &kp UNDER &kp K>;
+            label = "SALT3";
+        };
+
+        salt4: salt4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp Y &kp LS(J) &kp D &kp LS(L) &kp MINUS &kp LS(B) &kp LS(T) &kp W &kp LS(V) &kp LS(C) &kp LS(M) &kp LS(U) &kp AT &kp I &kp H &kp LS(E)>;
+            label = "SALT4";
+        };
+
+        salt5: salt5 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(X) &kp STAR &kp N9 &kp E &kp N9 &kp N4 &kp N &kp LS(M) &kp EXCL &kp M &kp B &kp N2 &kp LS(L) &kp STAR &kp H &kp LS(Y)>;
+            label = "SALT5";
+        };
+
+        salt6: salt6 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp V &kp LS(C) &kp N9 &kp K &kp LS(N) &kp LS(Y) &kp I &kp LS(G) &kp LS(H) &kp DOT &kp AT &kp T &kp AT &kp B &kp EXCL &kp I>;
+            label = "SALT6";
+        };
+
+        salt7: salt7 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp EXCL &kp C &kp LS(W) &kp P &kp LS(E) &kp O &kp LS(M) &kp D &kp AT &kp H &kp N4 &kp N &kp LS(J) &kp U &kp N8 &kp LS(P)>;
+            label = "SALT7";
+        };
+
+        salt8: salt8 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp V &kp DOT &kp DOT &kp LS(X) &kp P &kp T &kp J &kp LS(C) &kp MINUS &kp I &kp LS(B) &kp K &kp R &kp LS(M) &kp N4 &kp X>;
+            label = "SALT8";
+        };
     };
 
     combos { compatible = "zmk,combos"; };
@@ -142,10 +198,10 @@
         ADJ {
             display-name = "System";
             bindings = <
-&none  &kp K_MUTE  &kp C_VOL_UP  &kp C_VOL_DN  &bt BT_SEL 0  &bt BT_SEL 1      &none   &none      &none         &none    &none    &ctaldel
-&none  &none       &none         &none         &bt BT_SEL 2  &bt BT_SEL 3      &kp F1  &kp F2     &kp F3        &kp F5   &kp F5   &kp F6
-&none  &none       &none         &none         &bt BT_CLR    &bt BT_CLR_ALL    &kp F7  &kp F8     &kp F9        &kp F10  &kp F11  &kp F12
-                                 &kp LEFT_WIN  &kp SPACE     &trans            &trans  &kp ENTER  &kp LEFT_ALT
+&none   &kp K_MUTE  &kp C_VOL_UP  &kp C_VOL_DN  &bt BT_SEL 0  &bt BT_SEL 1      &none   &none      &none         &none    &none    &ctaldel
+&salt1  &salt2      &salt3        &salt4        &bt BT_SEL 2  &bt BT_SEL 3      &kp F1  &kp F2     &kp F3        &kp F5   &kp F5   &kp F6
+&salt5  &salt6      &salt7        &salt8        &bt BT_CLR    &bt BT_CLR_ALL    &kp F7  &kp F8     &kp F9        &kp F10  &kp F11  &kp F12
+                                  &kp LEFT_WIN  &kp SPACE     &trans            &trans  &kp ENTER  &kp LEFT_ALT
             >;
         };
     };
